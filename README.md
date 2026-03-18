@@ -1,95 +1,59 @@
-# CO-FOOTBALL ⚽🤖
-### Co-Creative AI System for Football Tactical Analysis
+# ⚽ CO-FOOTBALL: Co-Creative Tactical Analysis System
 
-CO-FOOTBALL is an interactive system that enables users to explore football tactics through **data-driven analysis** and **human–AI collaboration**.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![LLM](https://img.shields.io/badge/AI-Groq%20/%20LLaMA%203-orange.svg)](https://groq.com/)
 
-The system combines:
-- Player-level data analysis
-- Tactical mismatch detection
-- Interactive visualizations
-- A conversational AI assistant
+**CO-FOOTBALL** is an AI-powered interactive system designed to support football fans and tactical analysts in exploring match strategies through **Human-AI Collaboration**. 
 
-to support realistic and explainable tactical decision-making.
+The system leverages real-world player data (EAFC 26) to identify tactical mismatches and uses a Large Language Model (LLM) as a "Co-Creative Coach" to help users build, refine, and iterate on a game plan.
 
 ---
 
-## 📸 Demo / Preview
+## 🎓 Academic Context & Research
+This project was developed for the **Computational Creativity** course during my Erasmus program at **Leiden University** (Netherlands). 
 
-To quickly understand how the system works, check the visual walkthrough:
+Unlike standard dashboards, CO-FOOTBALL is grounded in a "Mixed-Initiative" design philosophy, where the AI acts as a collaborator rather than a simple automation tool.
 
-👉 **[Click here to view the full System Walkthrough (PDF)](./System_Screenshots_Walkthrough.pdf)**
+👉 **[Read the Full System Description Paper (PDF)](./CO_FOOTBALL_paper.pdf)**
 
-The PDF includes:
-- Team and formation selection
-- Dynamic pitch visualization
-- Lineup editing (substitutions & swaps)
-- Mismatch detection
-- AI-generated tactical plans
-- Interactive dialogue with the AI coach
+**Research Focus:**
+- **Mismatch Logic:** Quantitative calculation of tactical advantages using player-level attributes.
+- **Co-Creativity:** Enhancing human decision-making through AI-generated explanations.
+- **User Agency:** Maintaining the human "in the loop" for final strategic choices.
 
 ---
 
-## 🚀 Project Overview
+## 📸 System Walkthrough
+To see the system in action (UI layout, pitch visualization, and AI chat), please refer to the visual guide:
 
-Modern football tactics are complex and highly dependent on player attributes and matchups.
-
-CO-FOOTBALL helps users:
-- Analyze **player mismatches** using data
-- Experiment with **formations and lineups**
-- Receive **AI-generated tactical suggestions**
-- Iteratively refine strategies through **natural language interaction**
-
-Unlike standard recommendation systems, CO-FOOTBALL follows a **mixed-initiative approach**, where:
-- The user drives the decision-making
-- The AI supports reasoning and explanation
+👉 **[Click here to view the Full Screenshots Walkthrough (PDF)](./System_Screenshots_Walkthrough.pdf)**
 
 ---
 
-## ⚙️ Features
-
-- ⚽ **Mismatch Analysis**  
-  Detects player-level and positional advantages using aggregated metrics (speed, physicality, aerial ability, etc.)
-
-- 📊 **Data-Driven Modeling**  
-  Uses structured player attributes to support tactical reasoning
-
-- 🧠 **AI Tactical Assistant**  
-  LLM-based assistant that generates and explains tactical plans
-
-- 🎨 **Interactive Visualization**  
-  Real-time formation rendering and lineup updates
-
-- 🔄 **Co-Creative Interaction**  
-  Iterative human-AI collaboration through conversation
+## 🌟 Key Features
+- **Dynamic Mismatch Engine:** A custom algorithm that analyzes player attributes (Speed, Height, Strength, etc.) to identify physical and positional advantages/disadvantages.
+- **Interactive Lineup Management:** A Streamlit-based UI where users can select teams, swap player roles, and make substitutions with real-time updates.
+- **Mixed-Initiative AI Coach:** Integrated with **LLaMA-3 (via Groq API)**. The AI coach is constrained to use only listed bench players and provides data-driven tactical reasoning.
+- **Explainable AI (XAI):** The system doesn't just suggest a move; it explains *why* based on the underlying player statistics.
 
 ---
 
-## 🧰 Tech Stack
-
-- **Python**
-- **Streamlit** (frontend)
-- **Pandas / NumPy** (data processing)
-- **Matplotlib** (visualization)
-- **Groq API (LLM)** (AI assistant)
-
----
-
-## 📊 Data
-
-Player data is sourced from the EA Sports FC dataset (Kaggle), which provides structured attributes such as:
-
-- Speed
-- Physicality
-- Aerial ability
-- Positional roles
-
-This enables quantitative and interpretable tactical analysis.
+## 🛠️ Tech Stack & Data
+- **Language:** Python 3.9+
+- **Data Science:** Pandas, NumPy (Mismatch logic & data cleaning)
+- **Visualization:** Matplotlib (Custom pitch rendering)
+- **Generative AI:** Groq Cloud API (LLaMA-3 model)
+- **Web App:** Streamlit
+- **Dataset:** EA Sports FC 26 Player Database (Sourced from Kaggle)
 
 ---
 
-## 🖥️ Installation
+## 🔄 Workflow & Usage
+1. **Setup:** Select Team A and Team B with their respective formations.
+2. **Analysis:** Generate the initial Match Analysis to see the automatically selected Starting XIs.
+3. **Refinement:** Modify lineups by swapping player roles or making substitutions.
+4. **Co-Creation:** Click **"Generate AI Tactical Plan"** to receive a structured game plan.
+5. **Iteration:** Interact with the AI Coach via chat to ask specific questions or propose tactical shifts (e.g., "How should we adjust our high press?").
 
-```bash
-git clone <your-repo-link>
-cd co-football
-pip install -r requirements.txt
+---
