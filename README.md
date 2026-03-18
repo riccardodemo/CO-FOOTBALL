@@ -4,9 +4,9 @@
 [![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B.svg)](https://streamlit.io/)
 [![LLM](https://img.shields.io/badge/AI-Groq%20/%20LLaMA%203-orange.svg)](https://groq.com/)
 
-**CO-FOOTBALL** is an AI-powered interactive system designed to support football fans and tactical analysts in exploring match strategies through **Human-AI Collaboration**. 
+**CO-FOOTBALL** is a **functional prototype** of an AI-powered interactive system designed to support football fans and tactical analysts in exploring match strategies through **Human-AI Collaboration**. 
 
-The system leverages real-world player data (EAFC 26) to identify tactical mismatches and uses a Large Language Model (LLM) as a "Co-Creative Coach" to help users build, refine, and iterate on a game plan.
+The system leverages **EAFC 26 player data** as a rich proxy for real-world attributes to identify tactical mismatches, using a Large Language Model (LLM) as a "Co-Creative Coach" to help users build, refine, and iterate on a game plan.
 
 ---
 
