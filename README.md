@@ -17,7 +17,7 @@ to support realistic and explainable tactical decision-making.
 
 To quickly understand how the system works, check the visual walkthrough:
 
-👉 `docs/System_Screenshots_Walkthrough.pdf`
+👉 `./System_Screenshots_Walkthrough.pdf` 
 
 The PDF includes:
 - Team and formation selection
