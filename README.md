@@ -64,16 +64,39 @@ To see the system in action (UI layout, pitch visualization, and AI chat), pleas
 Follow these steps to run **CO-FOOTBALL** on your local machine:
 
 ### 1. Prerequisites
-Ensure you have **Python 3.9** or higher installed. You can check your version by running: python --version
+Ensure you have **Python 3.9** or higher installed. You can check your version by running: 
+```bash
+python --version```
 
 ### 2. Get a Groq API Key
 
 ### 3. Clone & Install
+Open your terminal and run:
+```bash
+# Clone the repository
+git clone [https://github.com/Riky1411/CO-FOOTBALL.git](https://github.com/Riky1411/CO-FOOTBALL.git)
+
+# Enter the project folder
+cd CO-FOOTBALL
+
+# Install all required libraries
+pip install -r requirements.txt```
 
 ### 4. Setting up the API Key
 The application looks for an environment variable named GROQ_API_KEY
 
-On Windows (Command Prompt): set GROQ_API_KEY=your_api_key_here
+On Windows (Command Prompt): 
+```cmd
+set GROQ_API_KEY=your_api_key_here```
+
+PowerShell:
+```bash
+$env:GROQ_API_KEY="your_api_key_here"```
+
+On Mac/Linux:
+```bash
+export GROQ_API_KEY="your_api_key_here"```
 
 ### 5. Run the App
-Start the Streamlit interface: streamlit run app.py
+Start the Streamlit interface: 
+```streamlit run app.py```
