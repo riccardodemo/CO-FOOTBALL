@@ -57,3 +57,25 @@ To see the system in action (UI layout, pitch visualization, and AI chat), pleas
 5. **Iteration:** Interact with the AI Coach via chat to ask specific questions or propose tactical shifts (e.g., "How should we adjust our high press?").
 
 ---
+
+
+## 🛠️ Installation & Local Setup
+
+Follow these steps to run **CO-FOOTBALL** on your local machine:
+
+### 1. Prerequisites
+Ensure you have **Python 3.9** or higher installed. You can check your version by running:
+```bash
+python --version
+
+### 2. Get a Groq API Key
+
+### 3. Clone & Install
+
+### 4. Setting up the API Key
+The application looks for an environment variable named GROQ_API_KEY
+
+On Windows (Command Prompt): set GROQ_API_KEY=your_api_key_here
+
+### 5. Run the App
+Start the Streamlit interface: streamlit run app.py
