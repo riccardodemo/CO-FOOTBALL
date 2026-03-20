@@ -15,7 +15,7 @@ This project was developed for the **Computational Creativity** course during my
 
 Unlike standard dashboards, CO-FOOTBALL is grounded in a "Mixed-Initiative" design philosophy, where the AI acts as a collaborator rather than a simple automation tool.
 
-👉 **[Read the Full System Description Paper (PDF)](./CO_FOOTBALL_paper.pdf)**
+👉 **[Read the Full System Description Paper (PDF)](./docs/CO_FOOTBALL_paper.pdf)**
 
 **Research Focus:**
 - **Mismatch Logic:** Quantitative calculation of tactical advantages using player-level attributes.
@@ -27,7 +27,7 @@ Unlike standard dashboards, CO-FOOTBALL is grounded in a "Mixed-Initiative" desi
 ## 📸 System Walkthrough
 To see the system in action (UI layout, pitch visualization, and AI chat), please refer to the visual guide:
 
-👉 **[Click here to view the Full Screenshots Walkthrough (PDF)](./System_Screenshots_Walkthrough.pdf)**
+👉 **[Click here to view the Full Screenshots Walkthrough (PDF)](./docs/System_Screenshots_Walkthrough.pdf)**
 
 ---
 
