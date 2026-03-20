@@ -64,9 +64,7 @@ To see the system in action (UI layout, pitch visualization, and AI chat), pleas
 Follow these steps to run **CO-FOOTBALL** on your local machine:
 
 ### 1. Prerequisites
-Ensure you have **Python 3.9** or higher installed. You can check your version by running:
-```bash
-python --version
+Ensure you have **Python 3.9** or higher installed. You can check your version by running: python --version
 
 ### 2. Get a Groq API Key
 
