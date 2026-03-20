@@ -75,7 +75,7 @@ python --version
 Open your terminal and run:
 ```bash
 # Clone the repository
-git clone [https://github.com/Riky1411/CO-FOOTBALL.git](https://github.com/Riky1411/CO-FOOTBALL.git)
+git clone https://github.com/Riky1411/CO-FOOTBALL.git 
 
 # Enter the project folder
 cd CO-FOOTBALL
