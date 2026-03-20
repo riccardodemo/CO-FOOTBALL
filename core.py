@@ -16,7 +16,7 @@ from groq import Groq
 # =========================
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = BASE_DIR / "EAFC26-Men.csv"
+DATA_PATH = BASE_DIR / "data" / "EAFC26-Men.csv"
 
 df = pd.read_csv(DATA_PATH)
 
