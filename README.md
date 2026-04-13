@@ -93,7 +93,7 @@ Follow these steps to run **CO-FOOTBALL** on your local machine.
 
 ```bash
 # Clone the repository
-git clone https://github.com/Riky1411/CO-FOOTBALL.git
+git clone https://github.com/riccardodemo/CO-FOOTBALL.git
 cd CO-FOOTBALL
 
 # (Recommended) Create a virtual environment
