@@ -49,6 +49,27 @@ To see the system in action (UI layout, pitch visualization, and AI chat), pleas
 
 ---
 
+## 📂 Project Structure
+
+```text
+CO-FOOTBALL/
+├── app.py                  # Streamlit UI (entry point)
+├── src/
+│   ├── __init__.py
+│   ├── config.py           # All constants, formations, team colors, LLM settings
+│   └── core.py             # Lineup logic, mismatch engine, pitch drawing, LLM calls
+├── data/
+│   └── EAFC26-Men.csv      # EA FC 26 player dataset
+├── docs/
+│   ├── CO_FOOTBALL_paper.pdf
+│   └── System_Screenshots_Walkthrough.pdf
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
 ## 🔄 Workflow & Usage
 1. **Setup:** Select Team A and Team B with their respective formations.
 2. **Analysis:** Generate the initial Match Analysis to see the automatically selected Starting XIs.
@@ -61,49 +82,69 @@ To see the system in action (UI layout, pitch visualization, and AI chat), pleas
 
 ## 🛠️ Installation & Local Setup
 
-Follow these steps to run **CO-FOOTBALL** on your local machine:
+Follow these steps to run **CO-FOOTBALL** on your local machine.
 
 ### 1. Prerequisites
-Ensure you have **Python 3.9** or higher installed. You can check your version by running: 
-```bash
-python --version
-```
 
-### 2. Get a Groq API Key
+- **Python 3.9+** — check with `python --version`
+- A free **Groq API Key** — sign up at [console.groq.com](https://console.groq.com/)
 
-### 3. Clone & Install
-Open your terminal and run:
+### 2. Clone & Install
+
 ```bash
 # Clone the repository
-git clone https://github.com/Riky1411/CO-FOOTBALL.git 
-
-# Enter the project folder
+git clone https://github.com/Riky1411/CO-FOOTBALL.git
 cd CO-FOOTBALL
 
-# Install all required libraries
+# (Recommended) Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# Windows (Command Prompt):
+venv\Scripts\activate
+# Windows (PowerShell):
+venv\Scripts\Activate.ps1
+# Mac / Linux:
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 4. Setting up the API Key
-The application looks for an environment variable named GROQ_API_KEY
+### 3. Set the API Key
 
-On Windows (Command Prompt): 
-```cmd
+The application needs the environment variable `GROQ_API_KEY`.
+
+**Option A — `.env` file (recommended):**
+Create a `.env` file in the project root (it is already in `.gitignore`):
+
+```text
+GROQ_API_KEY=your_api_key_here
+```
+
+Then install the helper package and it will be loaded automatically:
+
+```bash
+pip install python-dotenv
+```
+
+**Option B — Export directly in your terminal:**
+
+```bash
+# Windows (Command Prompt)
 set GROQ_API_KEY=your_api_key_here
-```
 
-PowerShell:
-```bash
+# Windows (PowerShell)
 $env:GROQ_API_KEY="your_api_key_here"
-```
 
-On Mac/Linux:
-```bash
+# Mac / Linux
 export GROQ_API_KEY="your_api_key_here"
 ```
 
-### 5. Run the App
-Start the Streamlit interface: 
+### 4. Run the App
+
 ```bash
 streamlit run app.py
 ```
+
+The app will open in your browser at `http://localhost:8501`.

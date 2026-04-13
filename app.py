@@ -5,7 +5,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-from core import (
+from src.config import FORMATION_LIST, SYSTEM_PROMPT
+from src.core import (
     df,
     generate_chat_response,
     run_cofootball,
@@ -114,13 +115,12 @@ with st.sidebar:
     st.header("Match setup")
 
     teams = sorted(df["Team"].unique())
-    formations = ["4-3-3", "4-4-2", "3-5-2", "4-2-3-1", "3-4-3", "3-4-2-1"]
 
     team1 = st.selectbox("Team A", teams, key="team1")
-    formation1 = st.selectbox("Formation A", formations, key="formation1")
+    formation1 = st.selectbox("Formation A", FORMATION_LIST, key="formation1")
 
     team2 = st.selectbox("Team B", teams, index=1, key="team2")
-    formation2 = st.selectbox("Formation B", formations, key="formation2")
+    formation2 = st.selectbox("Formation B", FORMATION_LIST, key="formation2")
 
     generate_btn = st.button("Generate Match Analysis")
     reset_btn = st.button("Reset / Regenerate auto XI")
@@ -248,35 +248,6 @@ else:
 # AI TACTICS
 # -------------------------
 
-SYSTEM_PROMPT = """
-You are an elite football tactical analyst assisting a professional coaching staff.
-
-BEHAVIOUR
-- Think step by step from data to tactics.
-- Base every conclusion strictly on the provided lineups and mismatches.
-- Prefer structured bullet points over long paragraphs.
-- Be concise, concrete, and realistic.
-
-DECISION PRIORITY
-1. Exploit clear physical or positional mismatches.
-2. Protect structural weaknesses when attacking.
-3. Maintain rest-defense and counter-pressing security.
-4. Suggest substitutions ONLY if they solve a specific tactical problem.
-
-CONSTRAINTS
-- Do NOT invent players.
-- Use ONLY the listed bench players.
-- Do NOT repeat starting lineups unless asked.
-- Do NOT change formation unless strictly necessary.
-- If information is missing, say so explicitly.
-
-OUTPUT STYLE
-- Clear section headers.
-- Bullet points with short tactical reasoning.
-- No generic football clichés.
-"""
-
-
 st.subheader("🧠 AI Tactical Game Plan")
 
 # Generate initial tactical analysis
@@ -362,9 +333,6 @@ if "llm_messages" in st.session_state and len(st.session_state["llm_messages"]) 
             {"role": "assistant", "content": ai_reply}
         )
 
-        # 5️⃣ force immediate UI update
-        st.rerun()
-
     # ENTER triggers this
     st.text_input(
         "Your message",
@@ -372,4 +340,3 @@ if "llm_messages" in st.session_state and len(st.session_state["llm_messages"]) 
         key="chat_input",
         on_change=send_message
     )
-
